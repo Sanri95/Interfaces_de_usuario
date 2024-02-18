@@ -1,85 +1,88 @@
 /* importacion de la fuente de google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
 /* declaracion de variables para estilos predefinidos en css */
 :root {
-    --primary-color: #5c48ee;
-    --primary-color-dark: #0f1e6a;
-    --secondary-color: #f9fafe;
-    --text-color: #333333;
-    --white: #ffffff;
-    --max-width: 1200px;
-  }
+  --primary-color: #5c48ee;
+  --primary-color-dark: #0f1e6a;
+  --secondary-color: #f9fafe;
+  --text-color: #333333;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
 
-  /* estilos generales de la pagina */
+/* estilos generales de la pagina */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-  /* estilos del body */
+/* estilos del body */
 body {
-    font-family: "Poppins", sans-serif;
-    background-color: var(--secondary-color);
-  }
+  font-family: "Poppins", sans-serif;
+  background-color: var(--secondary-color);
+}
 
-  /* estilos de la barra de navegacion */
+/* estilos de la barra de navegacion */
 nav {
-    max-width: var(--max-width);
-    margin: auto;
-    padding: 1rem;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .nav__logo a {
-    font-size: 1.5rem;
-    font-weight: 500;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo a {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.link a {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: 0.3s;
+}.link a:hover {
     color: var(--primary-color);
-    text-decoration: none;
-    transition: 0.3s;
+  }
+  .btn{
+    background-color: #7d2ae8;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #7d2ae8;
+    color: #fff;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+  .link .nav__btn {
+    padding: 0.5rem 2rem;
+    color: var(--white) !important;
+    background-color: #5c48ee;
+    border-radius: 5px;
   }
   
-  .nav__links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  .link .nav__btn:hover {
+    background-color: var(--primary-color-dark);
   }
   
-  .link a {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--text-color);
-    text-decoration: none;
-    transition: 0.3s;
-  }.link a:hover {
-      color: var(--primary-color);
-    }
-    .btn{
-      background-color: #7d2ae8;
-      border: 2px solid #fff;
-      outline: none;
-      border-radius: 8px;
-      box-shadow: 0 0 10px #7d2ae8;
-      color: #fff;
-      letter-spacing: 1px;
-      cursor: pointer;
-    }
-    .link .nav__btn {
-      padding: 0.5rem 2rem;
-      color: var(--white) !important;
-      background-color: #5c48ee;
-      border-radius: 5px;
-    }
-    
-    .link .nav__btn:hover {
-      background-color: var(--primary-color-dark);
-    }
-    /* estilos del contenedor principal */
+
+/* estilos del contenedor principal */
   .container {
     max-width: var(--max-width);
     margin: auto;
@@ -150,9 +153,10 @@ nav {
   .content__container button:hover {
     background-color: var(--primary-color-dark);
   }
-   /* estilos de las imagenes */
+  
+  /* estilos de las imagenes */
 
-   .image__container {
+  .image__container {
     position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -194,8 +198,8 @@ nav {
   .image__content li {
     margin-bottom: 0.5rem;
   }
-
-  /* RESSPONSIVE */
+  
+/* RESSPONSIVE */
 
   @media (width < 900px) {
     .link a:not(.nav__btn) {
