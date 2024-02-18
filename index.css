@@ -17,4 +17,10 @@
     box-sizing: border-box;
   }
 
+  /* estilos del body */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--secondary-color);
+  }
+
   
