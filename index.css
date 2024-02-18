@@ -150,4 +150,47 @@ nav {
   .content__container button:hover {
     background-color: var(--primary-color-dark);
   }
+   /* estilos de las imagenes */
+
+   .image__container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    place-content: center;
+  }
   
+  .image__container img {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    border-radius: 10px;
+  }
+  .image__container img:nth-child(1) {
+    transform: translateY(70px);
+  }
+  
+  .image__container img:nth-child(2) {
+    transform: translateY(-70px);
+  }
+  
+  .image__content {
+    position: absolute;
+    width: 100%;
+    max-width: 310px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-35%, 50%);
+    background: linear-gradient(
+      to right,
+      var(--primary-color),
+      var(--primary-color-dark)
+    );
+    color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+  }
+  
+  .image__content li {
+    margin-bottom: 0.5rem;
+  }
